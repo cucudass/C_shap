@@ -1,0 +1,7 @@
+D:\VisualStudioC#\Program\Program\bin\Debug\Program.exe.config
+D:\VisualStudioC#\Program\Program\bin\Debug\Program.exe
+D:\VisualStudioC#\Program\Program\bin\Debug\Program.pdb
+D:\VisualStudioC#\Program\Program\obj\Debug\Program.csprojAssemblyReference.cache
+D:\VisualStudioC#\Program\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+D:\VisualStudioC#\Program\Program\obj\Debug\Program.exe
+D:\VisualStudioC#\Program\Program\obj\Debug\Program.pdb
