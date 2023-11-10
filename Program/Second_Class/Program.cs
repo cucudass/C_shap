@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Second_Class {
+namespace Class_02{
     public class Item {
         private int price;
         public string name;

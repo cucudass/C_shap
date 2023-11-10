@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace First_Class {
+namespace Class_01{
     class Program {
         static void Main(string[] args) {
             //출력: Console.WriteLine();
