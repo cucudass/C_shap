@@ -5,46 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Program {
-    public delegate void Calculator(int x, int y);
-
     class Program {
-        static void Add(int x, int y) {
-            Console.WriteLine("x + y = " + (x + y));
-        }
-        static void Substract(int x, int y) {
-            Console.WriteLine("x - y = " + (x - y));
-        }
-        static void Multiply(int x, int y) {
-            Console.WriteLine("x * y = " + (x * y));
-        }
-        static void Divide(int x, int y) {
-            Console.WriteLine("x / y = " + (x / y));
-        }
-
         static void Main(string[] args) {
-            #region delegate
-            //Calculator calculator;
-            //calculator = Add;
-            //calculator(10, 20);
-            //calculator = Substract;
-            //calculator(10, 20);
+            #region SRP 5대 원칙
+            //Monster spider = new Monster("독거미", 20, 50);
+            //Information info = new Information();
+
+            //spider.Patrol();
+            //info.MonsterInfo(spider);
             #endregion
 
-            #region 델리게이트 체인
-            //calculator = Add;
-            //calculator += Substract;
-            //calculator += Multiply;
-            //calculator += Divide;
+            #region OCP 5대 원칙
+            Marine marine = new Marine();
+            Ghost ghost = new Ghost();
+            UnitManager unitManager = new UnitManager();
 
-            //calculator -= Divide;
-
-            //calculator(5, 5);
+            unitManager.Command(marine);
+            unitManager.Command(new FireBet());
+            unitManager.Command(ghost);
             #endregion
-
-            #region base 키워드
-            Wizrad wizrad = new Wizrad();
-            #endregion
-
         }
     }
 }
