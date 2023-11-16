@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyInversion.cs" />
     <Compile Include="Information.cs" />
+    <Compile Include="InterfaceSegregation.cs" />
     <Compile Include="OpenClosed.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

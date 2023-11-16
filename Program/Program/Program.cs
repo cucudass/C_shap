@@ -16,13 +16,33 @@ namespace Program {
             #endregion
 
             #region OCP 5대 원칙
-            Marine marine = new Marine();
-            Ghost ghost = new Ghost();
-            UnitManager unitManager = new UnitManager();
+            //Marine marine = new Marine();
+            //Ghost ghost = new Ghost();
+            //UnitManager unitManager = new UnitManager();
 
-            unitManager.Command(marine);
-            unitManager.Command(new FireBet());
-            unitManager.Command(ghost);
+            //unitManager.Command(marine);
+            //unitManager.Command(new FireBet());
+            //unitManager.Command(ghost);
+            #endregion
+
+            #region ISP 5대 원칙
+            //Wraith wraith = new Wraith();
+            //Battlecruiser battlecruiser = new Battlecruiser();
+            //Valkyrie valkyrie = new Valkyrie();
+            //Dropship dropship = new Dropship();
+            //wraith.Move();
+            //wraith.Attack();
+            //wraith.Skill();
+            //battlecruiser.Skill();
+            //valkyrie.Attack();
+            //dropship.Skill();
+            #endregion
+
+            #region DIP 5대 원칙
+            Knife knife = new Knife();
+            Player player = new Player();
+            player.ChangeWeapon(knife);
+            player.Info();
             #endregion
         }
     }
