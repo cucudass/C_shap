@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Program {
-    class Program {
-        static void Main(string[] args) {
+    class Deque<T> {
+        private T data;
 
+        public void Set(T data) {
+            this.data = data;
         }
     }
 }
