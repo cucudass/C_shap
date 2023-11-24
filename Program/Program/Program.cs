@@ -4,44 +4,37 @@ using System.Collections.Generic;
 
 namespace Program {
     class Program {
-        public static void Swap(ref int a, ref int b) {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
-        public static void QuickSort(int[] arr, int start, int end) {
-            int pivot = start;
-            int left = start + 1;
-            int right = end;
+        static void Merge(int[] arr, int left, int right) {
+            int[] temp = arr;
+            int L = 0, R = 0;
 
-            while (left <= right) {
-                while (arr[pivot] > arr[left]) {
-                    left++;
-                }
-                while (arr[pivot] < arr[right]) {
-                    right--;
-                }
-                if(arr[left] > arr[right])
-                    Swap(ref arr[left], ref arr[right]);
+
+
+
+            for (int i = left; i < right; i++) {
+                arr[i] = temp[i];
             }
-            Swap(ref arr[pivot], ref arr[right]);
-            QuickSort(arr, start, right-1);
-            QuickSort(arr, right+1, end);
         }
+        static void MergeSort(int[] arr, int left, int right) {
+            int mid = 0;
+            mid = (left + right) / 2;
+            MergeSort(arr, left, mid);
+            MergeSort(arr, mid + 1, right);
+            Merge(arr, left, right);
+        }
+
         static void Main(string[] args) {
-            #region 퀵정렬
-            /* 기준점을 획득한 다음 해당 기준점을 기준으로 배여을 나누고 한 쪽에는 기준점보다 작은 항목들이 위치하고
-             * 다른 쪽에는 기준점보다 끈 항목들이 위치한다.
-             * 
-             * 나뉘어진 하위 배열에 대해 재귀적으로 퀵 정렬을 호출하여 모든 배열이 기본 배열이 될 때까지 반복하면서 정렬하는 알고리즘
-             * 시간복잡도: O(log n)
+            #region 병합정렬
+            /* 하나의 리스트를 두 개의 균등한 크기로 분할하고 분할된 부분 리스트를 정렬한 다음, 
+             * 두 개의 정렬된 부분의 리스트를 합하여 전체가 정렬된 리스트가 되게 하는 방법
+             * 분할 : 입력 배열을 같은 크기의 2개의 부분 배열로 분할한다.
+             * 정복 : 부분 배열을 정렬하며, 부분 배열의 크기가 충분히 작지 않으면,
+             *        순환 호출을 이용하여 다시 분할 정복을 실행
+             * 결합 : 정렬된 부분 배열들을 하나의 배열에 병합한다.
              */
-            int[] arr = new int[9] { 5, 3, 8, 4, 9, 1, 6, 2, 7 };
-            QuickSort(arr, 0, arr.Length - 1);
+            int[] arr = new int[8] { 21, 10, 12, 20, 25, 13, 15, 22 };
+            MergeSort(arr, 0, arr.Length-1);
 
-            for (int i = 0; i < arr.Length; i++) {
-                Console.WriteLine(arr[i]);
-            }
             #endregion
         }
     }
