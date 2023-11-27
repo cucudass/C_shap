@@ -4,37 +4,23 @@ using System.Collections.Generic;
 
 namespace Program {
     class Program {
-        static void Merge(int[] arr, int left, int right) {
-            int[] temp = arr;
-            int L = 0, R = 0;
-
-
-
-
-            for (int i = left; i < right; i++) {
-                arr[i] = temp[i];
-            }
-        }
-        static void MergeSort(int[] arr, int left, int right) {
-            int mid = 0;
-            mid = (left + right) / 2;
-            MergeSort(arr, left, mid);
-            MergeSort(arr, mid + 1, right);
-            Merge(arr, left, right);
-        }
-
         static void Main(string[] args) {
-            #region 병합정렬
-            /* 하나의 리스트를 두 개의 균등한 크기로 분할하고 분할된 부분 리스트를 정렬한 다음, 
-             * 두 개의 정렬된 부분의 리스트를 합하여 전체가 정렬된 리스트가 되게 하는 방법
-             * 분할 : 입력 배열을 같은 크기의 2개의 부분 배열로 분할한다.
-             * 정복 : 부분 배열을 정렬하며, 부분 배열의 크기가 충분히 작지 않으면,
-             *        순환 호출을 이용하여 다시 분할 정복을 실행
-             * 결합 : 정렬된 부분 배열들을 하나의 배열에 병합한다.
+            #region 그래프
+            /* 정점(vertex)과 간선(Edge)들이 서로 복잡하게 연결되어 있는 자료구조
+             * 정점(vertex) - 노드(Node)라고도 하며, 데이터가 저장되는 그래프의 기본 원소
+             * 간선(Edge) - 링크(Link)라고도 하며, 정점 감의 관계를 나타낸다.
+             * 인접 정점(adjacent vertex) - 하나의 정점에서 간선에 의해 직접 연결되어 있는 정점
+             * 차수(Degree) - 정점에 연결된 간선의 수를 의미
+             * 진입차수 - 외부에서 오는 간선의 수를 의미
+             * 진출차수 - 외부로 향하는 간선의 수를 의미
+             * 단순 경로(Simple Path) - 경로 중에서 반복되는 간선이 없는 경로를 의미한다.
+             * 사이클(Cycle) - 시작 정점과 종료 정점이 같은 단순 경로를 의미한다.
              */
-            int[] arr = new int[8] { 21, 10, 12, 20, 25, 13, 15, 22 };
-            MergeSort(arr, 0, arr.Length-1);
+            #endregion
 
+            #region 인접행렬
+            /* 
+             */
             #endregion
         }
     }
