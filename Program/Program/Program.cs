@@ -19,8 +19,48 @@ namespace Program {
             #endregion
 
             #region 인접행렬
-            /* 
+            /*
+            AdjacencyMatrix<string> matrix = new AdjacencyMatrix<string>(4);
+
+            matrix.InsertVertex("A");
+            matrix.InsertVertex("B");
+            matrix.InsertVertex("C");
+            matrix.InsertVertex("D");
+
+            //A
+            matrix.InsertEdge(0, 1);
+            matrix.InsertEdge(0, 2);
+            matrix.InsertEdge(0, 3);
+
+            //B
+            matrix.InsertEdge(1, 2);
+
+            //C
+            matrix.InsertEdge(2, 3);
+
+            matrix.Display();
              */
+            #endregion
+
+            #region 인접리스트
+            char[] ch = new char[] { 'A', 'B', 'C', 'D', 'E' };
+            AdjacencyList<char> list = new AdjacencyList<char>(5);
+
+            for (int i = 0; i < ch.Length; i++) {
+                list.InsertVertex(ch[i]);
+            }
+
+            list.AddEdge(0, 'B');
+            list.AddEdge(1, 'A');
+            list.AddEdge(1, 'C');
+            list.AddEdge(2, 'B');
+            list.AddEdge(2, 'D');
+            list.AddEdge(3, 'C');
+            list.AddEdge(3, 'E');
+            list.AddEdge(4, 'D');
+
+            list.Display();
+
             #endregion
         }
     }
