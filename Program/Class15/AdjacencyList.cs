@@ -20,6 +20,7 @@ namespace Program {
             for (int i = 0; i < size; i++) {
                 vertex[i] = new List<int>();
             }
+            visited = new bool[index];
         }
 
         public void AddEdge(int vertexIndex, int edge) {
@@ -37,7 +38,6 @@ namespace Program {
         }
 
         public void BFS(int root) {
-            visited = new bool[index];
             queue = new Queue<int>();
             
             queue.Enqueue(root);
@@ -58,6 +58,19 @@ namespace Program {
                 }
             }
             Console.WriteLine(" ");
+        }
+
+        public void DFS(int root) {
+            visited[root] = true;
+            Console.Write(root + " ");
+            if (vertex[root].Count == 0)
+                return;
+            for (int i = 0; i < vertex[root].Count; i++) {
+                if (!visited[vertex[root][i]]) {
+                    visited[vertex[root][i]] = true;
+                    DFS(vertex[root][i]);
+                }
+            }
         }
     }
 }
