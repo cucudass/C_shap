@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace Class16 {
+namespace Class_16 {
     class Program {
         static IEnumerable Load() {
             int data = 0;

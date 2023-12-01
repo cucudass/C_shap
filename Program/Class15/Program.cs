@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Program;
-namespace Class15 {
+namespace Class_15 {
     class Program {
         static void Main(string[] args) {
             #region 너비 우선 탐색

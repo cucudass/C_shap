@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Program {
+namespace Class_17 {
     class Program {
         static Dictionary<int, int> memory = new Dictionary<int, int>();
         static int Fibonacci(int n) {
@@ -13,9 +15,9 @@ namespace Program {
                     memory.Add(n, 1);
                 return 1;
             }
-            if(memory.ContainsKey(n))
+            if (memory.ContainsKey(n))
                 return memory[n];
-            
+
             memory[n] = Fibonacci(n - 1) + Fibonacci(n - 2);
             return memory[n];
         }
@@ -43,7 +45,7 @@ namespace Program {
              */
             Program program = new Program();
             int count = Convert.ToInt32(Console.ReadLine());
-            int[] memoization = new int[count + 1] ;
+            int[] memoization = new int[count + 1];
 
             int result = program.Fibonacci_p(count, memoization);
             Console.WriteLine(Fibonacci(result));
